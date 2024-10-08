@@ -313,7 +313,7 @@ idCheck() {
     serialList=$(curl -s -L -X GET "$jamfProURL"/JSSResource/computergroups/id/"$staticID2" \
         -H "Authorization: Bearer ${accessToken}" \
         -H 'accept: application/json' | jq -r '.computer_group.computers')
-    echo "serialList var: $serialList"
+    #echo "serialList var: $serialList"
 
     if [[ "$smartCheck" == true ]]; then
         echo "Smart Group Check: Entered ID IS Smart Group. Can NOT continue!..."
